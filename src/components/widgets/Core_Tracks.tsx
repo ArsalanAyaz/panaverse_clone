@@ -2,7 +2,31 @@ import React from 'react'
 import Wrapper from '@/components/shared/Wrapper'
 import Button from '@/components/shared/Button'
 
+
 const Core_Tracks = () => {
+
+
+    const CoreTracksData = [
+        {
+            header:"Quarter 1",
+            description: "In this module, students will be introduced to Anaconda, the leading open data science platform powered by Python",
+            number:1
+        },
+        {
+            header:"Quarter 2",
+            description: "Before implementing deep-learning algorithms, students will first become familiar with the mathematical blocks of the neural networks theory. Students will get a chance to get their hands dirty writing some simple Keras code right away",
+            number:2
+        },
+        {
+            header:"Quarter 3",
+            description: "This module provides a soup-to-nuts learning experience for core Docker technologies, including the Docker Engine, Images, Containers, Registries, Networking, Storage, and more",
+            number:3
+        },
+    ]
+
+
+
+
   return (
     <section className='mt-8 lg:mt-16'>
         <Wrapper>
@@ -20,23 +44,19 @@ const Core_Tracks = () => {
 
            {/* boxes */}
 
-           <div className='flex flex-col sm:flex-row p-6 gap-7'>
+           <div className='flex flex-col items-stretch sm:flex-row p-6 gap-6'>
 
-                <div className='relative px-8 py-8 border rounded-xl'>
-                    <h1 className='font-bold'>Quarter 1</h1>
-                    <p className='text-slate-400'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, et.</p>
-                    <div className='absolute top-0 right-10 text-8xl font-bold -z-10 text-gray-200'>1</div>
-                </div>
-                <div className='relative px-8 py-8 border rounded-xl'>
-                    <h1 className='font-bold'>Quarter 2</h1>
-                    <p className='text-slate-400'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, et.</p>
-                    <div className='absolute top-0 right-10 text-8xl font-bold -z-10 text-gray-200'>2</div>
-                </div>
-                <div className='relative px-8 py-8 border rounded-xl'>
-                    <h1 className='font-bold'>Quarter 3</h1>
-                    <p className='text-slate-400'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, et.</p>
-                    <div className='absolute top-0 right-10 text-8xl font-bold -z-10 text-gray-200'>3</div>
-                </div>
+                
+                {CoreTracksData.map((items) => {
+                    
+                    return(
+                        <div className='relative px-8 flex-1 items-stretch py-8 border rounded-xl hover:shadow-xl hover:scale-105 duration-500 mx-auto '>
+                            <h1 className='font-bold'>{items.header}</h1>
+                            <p className='text-slate-400'>{items.description}</p>
+                            <div className='absolute top-0 right-10 mt-4 text-8xl font-bold -z-10 text-gray-200'>{items.number}</div>
+                        </div>
+                    )
+                })}
                 
 
            </div>
