@@ -47,10 +47,10 @@ const Core_Tracks = () => {
            <div className='flex flex-col items-stretch sm:flex-row p-6 gap-6'>
 
                 
-                {CoreTracksData.map((items) => {
+                {CoreTracksData.map((items,i) => {
                     
                     return(
-                        <div className='relative px-8 flex-1 items-stretch py-8 border rounded-xl hover:shadow-xl hover:scale-105 duration-500 mx-auto '>
+                        <div key={i} className='relative px-8 flex-1 items-stretch py-8 border rounded-xl hover:shadow-xl hover:scale-105 duration-500 mx-auto '>
                             <h1 className='font-bold'>{items.header}</h1>
                             <p className='text-slate-400'>{items.description}</p>
                             <div className='absolute top-0 right-10 mt-4 text-8xl font-bold -z-10 text-gray-200'>{items.number}</div>

@@ -125,7 +125,7 @@ const SpecializedTrack = () => {
 
             <div className='shadow-xl self-start sticky top-28 basis-8/12 rounded border border-teal-800 p-8'>
               {/* left_part */}
-              <div>
+              <div >
                 <h3 className='text-teal-900'>READY FOR THE NEW ERA</h3>
                 <h2 className='text-2xl lg:text-3xl font-bold'>{selectedItemData?.header}</h2>
                 <p className='mt-4 text-slate-400'>
@@ -136,6 +136,7 @@ const SpecializedTrack = () => {
                   <BiRightArrowAlt className='text-teal-900 ml-2 mt-1 text-2xl hover:scale-105 duration-500' />
                 </button>
               </div>
+
               <div className='flex flex-col sm:flex-row items-stretch flex-1 mt-8 gap-4 mx-auto '>
 
                 { selectedItemData?.quarters.map((items) => {
@@ -165,7 +166,7 @@ const SpecializedTrack = () => {
               <div>
 
 
-                    {programsData.map((items, i) => {
+                    {programsData.map((items) => {
                       return(
 
                         <div onClick={() => setselectedItem(items.slug)} key={items.slug} className='flex border-xl rounded border-gray-500 hover:shadow-xl space-y-4 items-center'>

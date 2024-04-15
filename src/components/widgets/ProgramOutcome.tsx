@@ -29,7 +29,7 @@ const ProgramOutcome = () => {
                             {outcomeIcons.map((items,i) => {
 
                                 return(
-                                    <div className='flex gap-x-4 items-center'>
+                                    <div key={i} className='flex gap-x-4 items-center'>
                                             <GrStatusGood   className='font-bold text-xl md:text-4xl text-primary'/>
                                             <h4 className=' font-bold text-lg xl:text-3xl'>{items} </h4>
                                     </div>
